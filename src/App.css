@@ -1,33 +1,80 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.app {
+  background-color: rgb(50, 50, 50);
+  width: 30vw;
+  height: 100%;
+  margin: 8vh;
+  border: 1px solid rgb(29, 11, 11);
+}
+
+#display,
+#formula {
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
   color: white;
+  margin: 5px;
+  justify-content: flex-end;
+  font-size: 2em;
 }
 
-.App-link {
-  color: #61dafb;
+#formula {
+  min-height: 1.2em;
+  align-items: flex-end;
+  font-size: 1.2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#display div {
+  background-color: blue;
+  flex-grow: 1;
+}
+
+.buttonBlock {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 25%;
+  height: 10vh;
+  font-size: 1em;
+}
+button:hover {
+  background-color: grey;
+}
+
+#equals {
+  height: 20vh;
+}
+
+.operation {
+  background-color: rgb(255, 119, 0);
+}
+
+#clear {
+  width: 50%;
+  background-color: rgb(167, 167, 167);
+}
+#clear:hover {
+  background-color: grey;
+}
+
+.specialBlock {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(2, 10vh);
+  background-color: orange;
+}
+
+.specialBlock button {
+  width: 100%;
+}
+#zero {
+  grid-column: 1/3;
 }
